@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"
+        logicalFilePath="db.changelog-0.0.1.xml">
+
+    <changeSet id="001-1" author="octavio">
+        <createTable tableName="CATEGORIA">
+            <column name="ID" type="${numero}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_CATEGORIA"/>
+            </column>
+            <column name="NOME" type="${descricaolonga}"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
