@@ -2,7 +2,9 @@
 <databaseChangeLog
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"
+logicalFilePath="db.changelog-0.0.1.xml">
     <property name="arquivo" value="blob" dbms="oracle"/>
     <property name="arquivo" value="oid" dbms="postgresql"/>
     <property name="texto" value="oid" dbms="postgresql"/>
@@ -12,7 +14,7 @@
     <property name="decimal" value="java.sql.Types.NUMBER(19,2)" dbms="postgresql"/>
     <property name="decimallongo" value="java.sql.Types.NUMBER(24,8)" dbms="postgresql"/>
     <property name="decimaltrescasas" value="java.sql.Types.NUMBER(19,3)" dbms="postgresql"/>
-    <property name="numero" value="java.sql.Types.NUMBER(19,0)" dbms="postgresql"/>
+    <property name="numero" value="NUMBER(19,0)" dbms="postgresql"/>
     <property name="inteiro" value="java.sql.Types.NUMBER(10,0)" dbms="postgresql"/>
     <property name="inteiromenor" value="java.sql.Types.NUMBER(5,0)" dbms="postgresql"/>
 
@@ -27,5 +29,7 @@
     <property name="descricaolonga" value="java.sql.Types.VARCHAR(255)" dbms="postgresql"/>
     <property name="descricaoextralonga" value="java.sql.Types.VARCHAR(3000)" dbms="postgresql"/>
     <property name="logico" value="java.sql.Types.BOOLEAN" dbms="postgresql"/>
+
+    <include file="com.octavio.moneyapi.api/db.changelog-0.0.1.xml"/>
 
 </databaseChangeLog>
